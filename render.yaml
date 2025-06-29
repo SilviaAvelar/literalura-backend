@@ -3,7 +3,6 @@ services:
     name: literalura-backend
     runtime: docker
     plan: free
-    dockerfilePath: https://raw.githubusercontent.com/render-examples/java-maven-hello-world/master/Dockerfile
     envVars:
       - key: SPRING_DATASOURCE_URL
         fromDatabase:
