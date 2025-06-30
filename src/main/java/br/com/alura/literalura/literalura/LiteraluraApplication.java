@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LiteraluraApplication {
 
 	public static void main(String[] args) {
+		System.out.println("DB URL: " + System.getenv("SPRING_DATASOURCE_URL"));
 		SpringApplication.run(LiteraluraApplication.class, args);
 	}
+
 }
