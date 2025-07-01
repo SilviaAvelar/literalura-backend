@@ -36,8 +36,15 @@ target/
 *.iml
 *.iws
 
-# VS Code
-.vscode/
+# Pastas da IDE
+/.idea/
+/.vscode/
+*.iml
 
-# JDKs downloaded by IDEs
-.jdks/
+# Pastas do Java (JDKs)
+/.jdks/
+/.p2/
+
+# Arquivos e pastas do sistema
+.DS_Store
+*.log
