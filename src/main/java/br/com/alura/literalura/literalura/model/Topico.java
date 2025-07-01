@@ -1,6 +1,8 @@
 package br.com.alura.literalura.literalura.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,6 +17,7 @@ public class Topico {
     private String nome;
 
     @ManyToMany(mappedBy = "topicos")
+    @JsonIgnore
     private Set<Livro> livros = new HashSet<>();
 
     // Construtores
