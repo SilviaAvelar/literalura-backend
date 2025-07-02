@@ -1,8 +1,11 @@
 # Compiled class file
 *.class
 
-# Log file
+# Ignorar logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # BlueJ files
 *.ctxt
@@ -23,6 +26,13 @@ hs_err_pid*
 
 # Maven
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
 .mvn/
 
 # Eclipse
@@ -40,11 +50,17 @@ target/
 /.idea/
 /.vscode/
 *.iml
+*.ipr
+*.iws
 
 # Pastas do Java (JDKs)
 /.jdks/
 /.p2/
 
-# Arquivos e pastas do sistema
+# Ignorar arquivos do sistema operacional
 .DS_Store
-*.log
+Thumbs.db
+
+# Ignorar diretório do Git
+.git
+.gitignore
