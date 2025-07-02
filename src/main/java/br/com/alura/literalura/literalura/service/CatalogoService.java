@@ -5,6 +5,7 @@ import br.com.alura.literalura.literalura.model.Livro;
 import br.com.alura.literalura.literalura.model.Topico;
 import br.com.alura.literalura.literalura.model.dto.*;
 import br.com.alura.literalura.literalura.repository.AutorRepository;
+import br.com.alura.literalura.literalura.repository.AutorSpecifications;
 import br.com.alura.literalura.literalura.repository.LivroRepository;
 import br.com.alura.literalura.literalura.repository.TopicoRepository;
 import br.com.alura.literalura.literalura.service.exception.ResourceNotFoundException;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,7 +31,7 @@ public class CatalogoService {
     private final TopicoRepository topicoRepository;
     private final ConsumoApi consumoApi;
     private final IConverteDados conversor;
-    private final ConsultaMyMemory consultaMyMemory; // <-- INJEÇÃO
+    private final ConsultaMyMemory consultaMyMemory;
 
     @Value("${literalura.api.baseurl:https://gutendex.com/books/?search=}")
     private String enderecoBaseApi;
@@ -40,13 +42,13 @@ public class CatalogoService {
                            TopicoRepository topicoRepository,
                            ConsumoApi consumoApi,
                            IConverteDados conversor,
-                           ConsultaMyMemory consultaMyMemory) { // <-- INJEÇÃO
+                           ConsultaMyMemory consultaMyMemory) {
         this.livroRepository = livroRepository;
         this.autorRepository = autorRepository;
         this.topicoRepository = topicoRepository;
         this.consumoApi = consumoApi;
         this.conversor = conversor;
-        this.consultaMyMemory = consultaMyMemory; // <-- INJEÇÃO
+        this.consultaMyMemory = consultaMyMemory;
     }
 
     @Transactional
@@ -161,7 +163,8 @@ public class CatalogoService {
 
     @Transactional(readOnly = true)
     public Page<Autor> buscarAutoresPorNome(String nome, Pageable pageable) {
-        return autorRepository.findByNomeContainingIgnoreCase(nome, pageable);
+        Specification<Autor> spec = AutorSpecifications.nomeContemMultiplasPalavras(nome);
+        return autorRepository.findAll(spec, pageable);
     }
 
     @Transactional(readOnly = true)
