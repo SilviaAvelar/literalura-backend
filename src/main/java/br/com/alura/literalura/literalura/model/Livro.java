@@ -45,7 +45,7 @@ public class Livro {
                 String.join(",", dadosLivro.idiomas()) : "Desconhecido";
         this.numeroDownloads = dadosLivro.numeroDownloads();
         if (dadosLivro.formatos() != null && dadosLivro.formatos().imagemJpeg() != null) {
-            this.posterUrl = dadosLivro.formatos().imagemJpeg();
+            this.posterUrl = dadosLivro.formatos().imagemJpeg(); // << ATRIBUIR AQUI
         }
     }
 
