@@ -2,7 +2,6 @@ package br.com.alura.literalura.literalura.model;
 
 import br.com.alura.literalura.literalura.model.dto.DadosLivro;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
 

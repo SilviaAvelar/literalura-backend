@@ -97,15 +97,24 @@ public class CatalogoService {
 
     private Set<Topico> processarTopicos(DadosLivro dadosLivro) {
         Set<Topico> topicos = new HashSet<>();
-        if (dadosLivro.subjects() != null) {
+        if (dadosLivro.subjects() != null && !dadosLivro.subjects().isEmpty()) {
             String idiomaDoLivro = dadosLivro.idiomas().isEmpty() ? "en" : dadosLivro.idiomas().get(0);
 
             for (String nomeTopico : dadosLivro.subjects()) {
                 String nomeFinal = nomeTopico;
 
-                if (!idiomaDoLivro.equalsIgnoreCase("en")) {
-                    nomeFinal = consultaMyMemory.obterTraducao(nomeTopico, idiomaDoLivro);
-                    System.out.println("Traduzido: '" + nomeTopico + "' -> '" + nomeFinal + "'");
+                if (!"en".equalsIgnoreCase(idiomaDoLivro)) {
+                    try {
+                        String traducao = consultaMyMemory.obterTraducao(nomeTopico, idiomaDoLivro);
+                        if (traducao != null && !traducao.isBlank()) {
+                            nomeFinal = traducao;
+                            System.out.println("Traduzido: '" + nomeTopico + "' -> '" + nomeFinal + "'");
+                        } else {
+                            System.out.println("INFO: Tradução retornou vazia para '" + nomeTopico + "'. Usando original.");
+                        }
+                    } catch (Exception e) {
+                        System.err.println("AVISO: Falha ao traduzir o tópico '" + nomeTopico + "'. Usando o nome original. Erro: " + e.getMessage());
+                    }
                 }
 
                 if (nomeFinal.length() > 255) {
