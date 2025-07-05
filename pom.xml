@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>17</java.version>
 		<postgresql.version>42.7.7</postgresql.version>
 	</properties>
 
@@ -66,14 +66,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.3.1</version> <configuration>
-				<encoding>UTF-8</encoding>
-				<nonFilteredFileExtensions>
-					<nonFilteredFileExtension>jks</nonFilteredFileExtension>
-					<nonFilteredFileExtension>p12</nonFilteredFileExtension>
-				</nonFilteredFileExtensions>
-			</configuration>
+				<version>3.3.1</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<nonFilteredFileExtensions>
+						<nonFilteredFileExtension>jks</nonFilteredFileExtension>
+						<nonFilteredFileExtension>p12</nonFilteredFileExtension>
+					</nonFilteredFileExtensions>
+				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

@@ -1,6 +1,7 @@
 package br.com.alura.literalura.literalura.model;
 
 import br.com.alura.literalura.literalura.model.dto.DadosAutor;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class Autor {
     private Integer anoFalecimento;
 
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Livro> livros = new ArrayList<>();
 
     public Autor() {}

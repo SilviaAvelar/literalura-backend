@@ -1,36 +1,66 @@
-HELP.md
+# Compiled class file
+*.class
+
+# Ignorar logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*
+
+# Maven
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
+# Eclipse
 .project
-.settings
-.springBeans
-.sts4-cache
+.classpath
+.settings/
+.p2/
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ
+.idea/
+*.iml
 *.iws
+
+# Pastas da IDE
+/.idea/
+/.vscode/
 *.iml
 *.ipr
+*.iws
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Pastas do Java (JDKs)
+/.jdks/
+/.p2/
 
-### VS Code ###
-.vscode/
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
 
-.jdks/
-.p2/
+# Ignorar diretório do Git
+.git
+.gitignore

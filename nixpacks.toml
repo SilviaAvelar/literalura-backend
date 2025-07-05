@@ -1,0 +1,12 @@
+# nixpacks.toml
+
+providers = ["java"]
+
+[phases.setup]
+nixPkgs = ["...", "jdk17", "maven"]
+
+[phases.build]
+cmds = ["mvn -DskipTests clean package"] # Usar 'package' é mais padrão que 'install' para builds
+
+[start]
+cmd = "java -jar ./target/*.jar"

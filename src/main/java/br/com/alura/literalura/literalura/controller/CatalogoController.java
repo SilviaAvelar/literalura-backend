@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("")
 public class CatalogoController {
 
     private final CatalogoService catalogoService;

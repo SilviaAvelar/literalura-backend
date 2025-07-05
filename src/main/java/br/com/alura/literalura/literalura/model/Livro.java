@@ -1,6 +1,8 @@
 package br.com.alura.literalura.literalura.model;
 
 import br.com.alura.literalura.literalura.model.dto.DadosLivro;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -17,6 +19,7 @@ public class Livro {
     private String titulo;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
+    @JsonBackReference
     @JoinColumn(name = "autor_id")
     private Autor autor;
 
