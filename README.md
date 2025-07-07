@@ -1,33 +1,47 @@
 # 📚 Literalura - API de Catálogo de Livros
 
-![Status](https://img.shields.io/badge/status-ativo-brightgreen)
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Spring](https://img.shields.io/badge/Spring_Boot-3.x-green)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14-blue)
+[![Java](https://img.shields.io/badge/Java-17-blue.svg?logo=java)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.0-brightgreen.svg?logo=springboot)](https://spring.io/projects/spring-boot)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)](https://www.postgresql.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+> API RESTful desenvolvida durante o Challenge Back-End da Alura.
+> Catálogo interativo de livros, integrando com a API pública [Gutendex](https://gutendex.com/), com persistência no banco de dados PostgreSQL.
+
+---
 
 ## 📖 Sobre o Projeto
 
-**Literalura** é uma API RESTful desenvolvida como parte do Challenge Back-End da Alura. A aplicação funciona como um catálogo interativo de livros, consumindo dados da API pública [Gutendex](https://gutendex.com/). Ela permite buscar, salvar e consultar informações sobre livros e autores, persistindo todos os dados em um banco de dados PostgreSQL.
+O **Literalura** é uma aplicação que busca livros diretamente do *Project Gutenberg*, salva os dados em um banco local e fornece endpoints para explorar livros, autores e estatísticas literárias.
 
 O projeto foi estruturado para ser robusto e escalável, utilizando as melhores práticas do ecossistema Spring, como injeção de dependência, DTOs (Data Transfer Objects) para a comunicação com o cliente e tratamento de exceções centralizado.
 
-## ✨ Funcionalidades Principais da API
+---
 
-*   **Busca e Persistência:** Busca livros na API Gutendex pelo título e os salva no banco de dados local.
-*   **Paginação e Listagem:** Lista livros e autores registrados com suporte a paginação.
-*   **Filtros Avançados:** Permite listar autores vivos em um determinado ano e livros por idioma.
-*   **Consultas Específicas:** Oferece endpoints para buscar o Top 10 livros mais baixados e estatísticas gerais.
-*   **Tratamento de Erros:** Implementa um sistema de tratamento de exceções para fornecer respostas de erro claras e consistentes.
-*   **Configuração de CORS:** Preparada para ser consumida por frontends hospedados em domínios diferentes.
+## 🚀 Funcionalidades
+
+✅ Buscar livros pelo título e salvar no banco  
+✅ Listar livros e autores com paginação e ordenação  
+✅ Filtrar livros por idioma  
+✅ Ver autores vivos em determinado ano  
+✅ Top 10 livros mais baixados  
+✅ Estatísticas de downloads  
+✅ Tratamento de exceções centralizado  
+✅ CORS configurado para consumo externo
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-*   **Java 17 & Spring Boot 3:** Base da aplicação, oferecendo um ambiente robusto e moderno.
-*   **Spring Data JPA & Hibernate:** Para persistência de dados e mapeamento objeto-relacional.
-*   **PostgreSQL:** Banco de dados relacional para armazenamento das informações.
-*   **Maven:** Gerenciador de dependências e build do projeto.
-*   **Jackson:** Biblioteca para manipulação de JSON.
-*   **DTO (Data Transfer Objects):** Padrão utilizado para transferir dados entre as camadas da aplicação e o cliente.
+- Java 17
+- Spring Boot 3
+- Spring Data JPA + Hibernate
+- PostgreSQL
+- Maven
+- Jackson
+- Railway (deploy opcional)
+
+---
 
 ## 🚀 Como Executar a API Localmente
 
@@ -82,10 +96,33 @@ Você pode testar os endpoints usando ferramentas como [Insomnia](https://insomn
 | `GET`  | `/livros/stats`                            | Retorna estatísticas de downloads.                | `.../livros/stats`                             |
 | `GET`  | `/hello`                                   | Endpoint de teste para verificar se a API está no ar. | `.../hello`                                  |
 
-## ✒️ Autora
+## 👩‍💻 Autora
 
-Desenvolvido com dedicação por **Silvia Avelar**.
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&color=F7C52C&center=true&vCenter=true&width=700&height=70&lines=Olá,+sou+a+Sílvia+Avelar!;Desenvolvedora+Front-End;Apaixonada+por+Código+e+Café;Eternamente+Aprendendo..." alt="Typing SVG" />
+</p>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Silvia_Avelar-blue)](https://www.linkedin.com/in/silvia-avelar/)
-[![GitHub](https://img.shields.io/badge/GitHub-SilviaAvelar-black)](https://github.com/SilviaAvelar)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Online-blueviolet)](https://silviaavelar.github.io/Portfolio/)
+<p align="center">
+  Desenvolvido com 💙 por <strong>Sílvia Avelar</strong>
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/silvia-avelar/" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  &nbsp;
+  <a href="https://silviaavelar.github.io/Portfolio/" target="_blank">
+    <img src="https://img.shields.io/badge/-Portfólio-FF4081?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfólio">
+  </a>
+</p>
+
+Feito com 💙 por **Sílvia Avelar**
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a **MIT License**.  
+Sinta-se à vontade para contribuir ou adaptar!
+
+---
