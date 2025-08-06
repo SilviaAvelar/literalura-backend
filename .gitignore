@@ -41,11 +41,6 @@ buildNumber.properties
 .settings/
 .p2/
 
-# IntelliJ
-.idea/
-*.iml
-*.iws
-
 # Pastas da IDE
 /.idea/
 /.vscode/
@@ -64,3 +59,4 @@ Thumbs.db
 # Ignorar diretório do Git
 .git
 .gitignore
+.env
