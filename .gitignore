@@ -1,19 +1,6 @@
-# Compiled class file
-*.class
-
-# Ignorar logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+# Arquivos de Build e Pacotes
+# Ignora a pasta de build do Maven e arquivos de pacotes gerados.
+target/
 *.jar
 *.war
 *.ear
@@ -21,11 +8,31 @@ yarn-error.log*
 *.tar.gz
 *.rar
 
-# virtual machine crash logs
+# Logs e Arquivos de Runtime
+# Ignora arquivos de log e relatórios de crash da VM.
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 hs_err_pid*
 
-# Maven
-target/
+# Arquivos e Pastas de Configuração de IDEs
+# Ignora configurações específicas de editores e IDEs como IntelliJ, VSCode e Eclipse.
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.p2/
+.mtj.tmp/
+*.ctxt
+/.jdks/
+
+# Arquivos Gerados pelo Maven
+# Ignora arquivos temporários e de backup do Maven.
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -35,28 +42,11 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/
 
-# Eclipse
-.project
-.classpath
-.settings/
-.p2/
-
-# Pastas da IDE
-/.idea/
-/.vscode/
-*.iml
-*.ipr
-*.iws
-
-# Pastas do Java (JDKs)
-/.jdks/
-/.p2/
-
-# Ignorar arquivos do sistema operacional
+# Arquivos do Sistema Operacional
+# Ignora arquivos de sistema gerados pelo macOS e Windows.
 .DS_Store
 Thumbs.db
 
-# Ignorar diretório do Git
-.git
-.gitignore
+# Arquivo de Variáveis de Ambiente
+# IMPORTANTE: Nunca envie senhas e segredos para o repositório.
 .env
