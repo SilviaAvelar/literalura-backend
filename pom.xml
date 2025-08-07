@@ -63,6 +63,7 @@
 
 	<build>
 		<plugins>
+			<!-- ESTE É O PLUGIN QUE PRECISA SER AJUSTADO -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -70,8 +71,7 @@
 				<configuration>
 					<encoding>UTF-8</encoding>
 					<nonFilteredFileExtensions>
-						<nonFilteredFileExtension>jks</nonFilteredFileExtension>
-						<nonFilteredFileExtension>p12</nonFilteredFileExtension>
+						<nonFilteredFileExtension>properties</nonFilteredFileExtension>
 					</nonFilteredFileExtensions>
 				</configuration>
 			</plugin>
