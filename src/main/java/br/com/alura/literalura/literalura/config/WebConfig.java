@@ -12,10 +12,8 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins(
                         "https://literalura-frontend.vercel.app",
-                        "https://literalura-frontend-git-main-silvia-avelars-projects.vercel.app",
-                        "http://localhost:5500",
-                        "http://127.0.0.1:5500"
+                        "https://literalura-frontend-git-main-silvia-avelars-projects.vercel.app"
                 )
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS"); // Métodos permitidos
     }
 }
